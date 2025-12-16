@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>AtoZ Work</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="IMG_20251214_144256.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<!-- Dark mode DEFAULT -->
+
+<body class="dark">
+
+  <header class="site-header">
+    <div class="header-inner">
+
+      <div class="brand">
+        <img src="IMG_20251214_144256.png" alt="Logo">
+        <span>AtoZ Work</span>
+      </div>
+      <div id="datetime" class="datetime-box"></div>
+
+      <div class="nav-area">
+        <nav>
+          <a href="#workers">Workers</a>
+          <a href="#features">Features</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <!-- HEADER FEATURES -->
+        <button class="header-btn">📍 Location</button>
+        <button class="header-btn">⚡ Emergency</button>
+        <button id="themeBtn" aria-label="Toggle theme">☀️</button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <h1>Trusted Local Workers, On Demand</h1>
+      <p>Verified professionals for essential household services.</p>
+
+      <div class="search-box">
+        <input type="text" placeholder="Enter city">
+        <select>
+          <option>All Services</option>
+          <option>Electrician</option>
+          <option>Plumber</option>
+          <option>Carpenter</option>
+        </select>
+        <button class="primary-btn">Search</button>
+      </div>
+
+      <!-- ✅ WORKING COST ESTIMATOR -->
+      <div class="estimator">
+        <select id="serviceSelect">
+          <option value="">Estimate Service Cost</option>
+          <option value="electrician">Electrician</option>
+          <option value="plumber">Plumber</option>
+          <option value="carpenter">Carpenter</option>
+        </select>
+        <p id="costText">Estimated Cost: —</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- WORKERS -->
+  <section id="workers" class="section">
+    <h2 class="section-title">Available Workers</h2>
+
+    <div class="worker-grid">
+
+      <div class="worker-card">
+        <span class="badge available">Available</span>
+        <h3>Ramesh</h3>
+        <p>Electrician • Suri</p>
+        <p class="rating">⭐ 4.6 Trust Score</p>
+        <button>Book Now</button>
+      </div>
+
+      <div class="worker-card">
+        <span class="badge available">Available</span>
+        <h3>Suman</h3>
+        <p>Plumber • Mallarpur</p>
+        <p class="rating">⭐ 4.7 Trust Score</p>
+        <button>Book Now</button>
+      </div>
+
+      <div class="worker-card">
+        <span class="badge busy">Busy</span>
+        <h3>Anushka</h3>
+        <p>Carpenter • Rampurhat</p>
+        <p class="rating">⭐ 4.5 Trust Score</p>
+        <button disabled>Notify Me</button>
+      </div>
+
+      <div class="worker-card">
+        <span class="badge available">Available</span>
+        <h3>Kajal</h3>
+        <p>Painter • Suri</p>
+        <p class="rating">⭐ 4.8 Trust Score</p>
+        <button>Book Now</button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section id="features" class="section light">
+    <h2 class="section-title">Why AtoZ Work</h2>
+
+    <div class="feature-grid">
+      <div class="feature-card">🤖 Smart Worker Matching</div>
+      <div class="feature-card">💰 Instant Cost Estimation</div>
+      <div class="feature-card">⚡ Emergency Priority</div>
+      <div class="feature-card">🛡 Verified & Insured</div>
+      <div class="feature-card">📍 Location Based Search</div>
+      <div class="feature-card">⭐ Trust Score System</div>
+    </div>
+  </section>
+  <!--CONTACT FORM -->
+  <section id="contact" class="section">
+    <h2 class="section-title">Contact / Service Request</h2>
+
+    <form class="contact-form">
+      <input type="text" placeholder="Your Name" required>
+      <input type="tel" placeholder="Phone Number" required>
+      <input type="text" placeholder="City">
+      <textarea placeholder="Describe your work" rows="4"></textarea>
+      <button type="submit" class="primary-btn">Send Request</button>
+    </form>
+  </section>
+
+  <footer>
+    © 2025 AtoZ Work • Academic Project
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

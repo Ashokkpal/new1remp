@@ -1,0 +1,395 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, sans-serif;
+}
+
+/* DARK DEFAULT */
+body {
+  background: #020617;
+  color: #e5e7eb;
+}
+
+body.light {
+  background: #f8fafc;
+  color: #0f172a;
+}
+
+/* HEADER */
+.site-header {
+  background: linear-gradient(90deg, #0b1223, #06b6d4);
+  padding: 16px 0;
+}
+
+.header-inner {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  color: white;
+}
+
+.brand img {
+  width: 34px;
+}
+
+.nav-area {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.nav-area nav a {
+  color: white;
+  text-decoration: none;
+}
+
+.header-btn,
+#themeBtn {
+  background: rgba(255,255,255,0.25);
+  border: none;
+  padding: 6px 12px;
+  border-radius: 999px;
+  color: white;
+  cursor: pointer;
+}
+
+/* HERO */
+.hero {
+  position: relative;
+  background: url("gig-workers-1.avif") top center / cover no-repeat;
+  padding: 110px 20px;
+  text-align: center;
+}
+
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(15,23,42,0.7);
+}
+
+.hero-content {
+  position: relative;
+  max-width: 720px;
+  margin: auto;
+}
+
+/* SEARCH + ESTIMATOR */
+.search-box,
+.estimator {
+  margin-top: 22px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.search-box input,
+.search-box select,
+.estimator select {
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+}
+
+/* BUTTONS */
+.primary-btn,
+.worker-card button {
+  background: linear-gradient(135deg, #2563eb, #06b6d4);
+  color: white;
+  border: none;
+  padding: 11px 18px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* SECTIONS */
+.section {
+  max-width: 1200px;
+  margin: auto;
+  padding: 80px 24px;
+}
+
+.section.light {
+  background: #020617;
+}
+
+body.light .section.light {
+  background: #f1f5f9;
+}
+
+/* WORKERS */
+.worker-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
+  gap: 26px;
+}
+
+.worker-card {
+  background: #020617;
+  border: 1px solid #1e293b;
+  padding: 22px;
+  border-radius: 16px;
+}
+
+body.light .worker-card {
+  background: white;
+}
+
+.badge {
+  font-size: 0.75rem;
+  padding: 5px 10px;
+  border-radius: 999px;
+}
+
+.available {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.busy {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.rating {
+  color: #4ade80;
+  font-weight: 600;
+}
+
+/* FEATURES */
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+  gap: 22px;
+}
+
+.feature-card {
+  background: #020617;
+  border: 1px solid #1e293b;
+  padding: 26px;
+  border-radius: 16px;
+  text-align: center;
+}
+
+/* CONTACT FORM */
+.contact-form {
+  max-width: 420px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #1e293b;
+  background: #020617;
+  color: #e5e7eb;
+}
+
+body.light .contact-form input,
+body.light .contact-form textarea {
+  background: white;
+  color: #0f172a;
+  border-color: #e5e7eb;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 24px;
+  color: #94a3b8;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .header-inner {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .search-box,
+  .estimator {
+    flex-direction: column;
+  }
+
+  .primary-btn {
+    width: 100%;
+  }
+}
+
+/* Only for mobile */
+
+@media (max-width: 768px) {
+
+  /* Header spacing */
+  .nav-area {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .nav-area nav {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 6px;
+  }
+
+  /* Hero text scaling */
+  .hero-content h1 {
+    font-size: 1.6rem;
+    line-height: 1.3;
+  }
+
+  .hero-content p {
+    font-size: 0.95rem;
+  }
+
+  /* Search + estimator full width */
+  .search-box,
+  .estimator {
+    width: 100%;
+  }
+
+  .search-box input,
+  .search-box select,
+  .estimator select,
+  .primary-btn {
+    width: 100%;
+  }
+
+  /* Worker cards single column */
+  .worker-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .worker-card {
+    text-align: center;
+  }
+
+  /* Feature cards spacing */
+  .feature-grid {
+    grid-template-columns: 1fr;
+  }
+  @media (max-width: 768px) {
+  .feature-grid {
+    grid-template-columns: 1fr; /* single column */
+  }
+}
+
+  /* Contact form full width */
+  .contact-form {
+    width: 100%;
+  }
+
+  .contact-form input,
+  .contact-form textarea,
+  .contact-form button {
+    width: 100%;
+  }
+
+  /* Footer spacing */
+  footer {
+    padding: 18px;
+    font-size: 0.85rem;
+  }
+}
+
+@media (min-width: 769px) {
+
+
+  #contact .section-title {
+    text-align: center;
+  }}
+
+  #features {
+  text-align: center;
+}
+
+#features .feature-grid {
+  justify-items: center;
+}
+
+.feature-card {
+  color: #e5e7eb;
+}
+
+body.light .feature-card {
+  color: #0f172a;
+}
+
+
+/* Section background control */
+#features.section.light {
+  background: #020617;
+}
+
+/* Light mode background */
+body.light #features.section.light {
+  background: #f1f5f9;
+}
+
+/* Feature card background */
+#features .feature-card {
+  background: #020617;
+  color: #e5e7eb;
+  border: 1px solid #1e293b;
+}
+
+/* Light mode feature card */
+body.light #features .feature-card {
+  background: #ffffff;
+  color: #0f172a;
+  border-color: #e5e7eb;
+}
+
+/* Heading visibility */
+#features .section-title {
+  color: #e5e7eb;
+}
+
+body.light #features .section-title {
+  color: #0f172a;
+}
+
+#workers {
+  text-align: center;
+}
+
+#workers .worker-grid {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+
+
+
+
+
+
+@media (prefers-color-scheme: dark) {
+  body {
+    --datetime-bg: var(--datetime-bg-dark);
+    --datetime-color: var(--datetime-color-dark);
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  body {
+    --datetime-bg: var(--datetime-bg-light);
+    --datetime-color: var(--datetime-color-light);
+  }
+}
