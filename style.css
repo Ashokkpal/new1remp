@@ -393,3 +393,81 @@ body.light #features .section-title {
     --datetime-color: var(--datetime-color-light);
   }
 }
+
+/* login css */
+/* Sign In button in header */
+.nav-area .header-btn,
+.nav-area a.header-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* Highlight Sign In button */
+.nav-area a.header-btn {
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+  color: #ffffff;
+}
+
+/* Hover effect */
+.nav-area a.header-btn:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+/* Mobile spacing fix */
+@media (max-width: 768px) {
+  .nav-area a.header-btn {
+    margin-top: 6px;
+  }
+}
+
+
+/* nav bar */
+/* Navigation container */
+.nav-area nav {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+}
+
+/* Navigation links */
+.nav-area nav a {
+  position: relative;
+  color: #ffffff;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 6px 10px;
+  border-radius: 8px;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+/* Hover effect */
+.nav-area nav a:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Active section highlight (optional) */
+.nav-area nav a:active {
+  background: rgba(255, 255, 255, 0.35);
+}
+
+/* Light mode fix */
+body.light .nav-area nav a {
+  color: #ffffff;
+}
+
+/* Mobile layout */
+@media (max-width: 768px) {
+  .nav-area nav {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .nav-area nav a {
+    font-size: 0.9rem;
+  }
+}

@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Login | AtoZ Work</title>
+  <link rel="stylesheet" href="sign-in.css">
+</head>
+<body>
+
+<div class="wrap">
+  <form id="login-form" class="card" novalidate>
+
+    <!-- MODE SWITCH -->
+    <div class="mode-switch">
+      <button type="button" class="mode-tab active" data-mode="login">Log In</button>
+      <button type="button" class="mode-tab" data-mode="signup">Sign Up</button>
+    </div>
+
+    <h1 id="form-title">Log In</h1>
+
+    <!-- EMAIL -->
+    <label>Email</label>
+    <input type="email" name="email" required placeholder="you@example.com">
+
+    <!-- PASSWORD -->
+    <label>Password</label>
+    <div class="pw-row">
+      <input type="password" name="password" id="password" required>
+      <button type="button" id="toggle-pw">Show</button>
+    </div>
+
+    <!-- CONFIRM PASSWORD -->
+    <div id="confirm-row" class="hidden">
+      <label>Confirm Password</label>
+      <input type="password" name="confirm">
+    </div>
+
+    <button type="submit" class="primary">Log In</button>
+
+    <div class="divider"><span>or</span></div>
+
+    <!-- SOCIAL LOGIN -->
+<div class="social-row">
+  <button type="button" class="social google" id="googleLogin">
+    Continue with Google
+  </button>
+  <button type="button" class="social github" id="githubLogin">
+    Continue with GitHub
+  </button>
+  <button type="button" class="social facebook" id="facebookLogin">
+    Continue with Facebook
+  </button>
+</div>
+
+
+    <p class="hint"><a href="index.html">Back to Home</a></p>
+    <p id="msg" class="msg"></p>
+
+  </form>
+</div>
+
+<script src="sign-in.js"></script>
+</body>
+</html>
